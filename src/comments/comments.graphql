@@ -1,0 +1,9 @@
+type Query{
+    getComments: string
+}
+
+type Comment{
+    id: Int
+    postId: Int
+    text: String
+}

@@ -1,0 +1,11 @@
+type Query {
+    getPosts: [Post]
+}
+
+
+type Post{
+    id: Int
+    senderName: String
+    text: String,
+    pictureURL: String
+}
