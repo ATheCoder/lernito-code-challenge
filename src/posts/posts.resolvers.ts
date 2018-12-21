@@ -1,12 +1,17 @@
 import { Resolver, Query, Subscription } from '@nestjs/graphql'
 import { PostsService } from './posts.service'
+import { CommentsService } from 'src/comments/comments.service';
 
 @Resolver('Post')
 export class PostsResolvers {
-    constructor(private readonly postsService: PostsService) {}
+    constructor(private readonly postsService: PostsService, private readonly commentsService: CommentsService) {}
 
     @Query('getPosts')
     async getAllPosts() {
-        return await this.postsService.findAll()
+        let postsWithoutCommentsInfo = await this.postsService.findAll()
+        return await postsWithoutCommentsInfo.map((post) => {
+            post.numberOfComments = this.commentsService.getCommentsOfPost(post.id).length
+            return post
+        })
     }
 }

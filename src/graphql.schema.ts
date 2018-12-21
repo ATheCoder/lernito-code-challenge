@@ -9,6 +9,7 @@ export class Post {
     senderName?: string;
     text?: string;
     pictureURL?: string;
+    numberOfComments?: number;
 }
 
 export abstract class IQuery {

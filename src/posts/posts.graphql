@@ -6,6 +6,7 @@ type Query {
 type Post{
     id: Int
     senderName: String
-    text: String,
+    text: String
     pictureURL: String
+    numberOfComments: Int
 }
