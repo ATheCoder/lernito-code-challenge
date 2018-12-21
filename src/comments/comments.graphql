@@ -1,5 +1,5 @@
 type Query{
-    getComments: string
+    getCommentsOfPost(postId: Int): [Comment]
 }
 
 type Comment{

@@ -4,9 +4,8 @@ const Posts = require('./postExamples.json')
 
 @Injectable()
 export class PostsService {
-    private readonly posts: Post[] = Posts
 
     findAll(): Post[] {
-        return this.posts
+        return Posts
     }
 }
