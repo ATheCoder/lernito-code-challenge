@@ -4,7 +4,7 @@ const Comments = require('./commentExamples.json')
 
 @Injectable()
 export class CommentsService {
-    getCommentsOfPost(postId: number): Comment[] {
+    getCommentsOfPost(postId: string): Comment[] {
         return Comments.filter((comment) => {
             return comment.postId === postId
         })

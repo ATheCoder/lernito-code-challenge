@@ -5,7 +5,7 @@ export class Comment {
 }
 
 export class Post {
-    id?: number;
+    id?: string;
     senderName?: string;
     text?: string;
     pictureURL?: string;

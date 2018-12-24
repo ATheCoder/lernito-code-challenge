@@ -1,17 +1,17 @@
 [
     {
         "id": 1,
-        "postId": 1,
+        "postId": "5c20b847fb6fc00eee859a62",
         "text": "You are right dude!"
     },
     {
         "id": 2,
-        "postId": 1,
+        "postId": "5c20b847fb6fc00eee859a62",
         "text": "Yeeeeeeeeeeeeees"
     },
     {
         "id": 3,
-        "postId": 1,
+        "postId": "5c20b847fb6fc00eee859a62",
         "text": "Damn man!!!"
     }
 ]
