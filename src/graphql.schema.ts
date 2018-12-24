@@ -1,6 +1,6 @@
 export class Comment {
     id?: number;
-    postId?: number;
+    postId?: string;
     text?: string;
 }
 
@@ -13,7 +13,7 @@ export class Post {
 }
 
 export abstract class IQuery {
-    abstract getCommentsOfPost(postId?: number): Comment[] | Promise<Comment[]>;
+    abstract getCommentsOfPost(postId?: string): Comment[] | Promise<Comment[]>;
 
     abstract getPosts(): Post[] | Promise<Post[]>;
 

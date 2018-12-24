@@ -1,9 +1,9 @@
 type Query{
-    getCommentsOfPost(postId: Int): [Comment]
+    getCommentsOfPost(postId: String): [Comment]
 }
 
 type Comment{
     id: Int
-    postId: Int
+    postId: String
     text: String
 }

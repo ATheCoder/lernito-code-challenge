@@ -6,7 +6,7 @@ export class CommentsResolvers {
     constructor(private readonly commentsService: CommentsService) {}
 
     @Query('getCommentsOfPost')
-    async getCommentOfPost(@Args('postId') id: number) {
+    async getCommentOfPost(@Args('postId') id: string) {
         return await this.commentsService.getCommentsOfPost(id)
     }
 }

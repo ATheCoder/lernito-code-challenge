@@ -9,8 +9,8 @@ export class PostsResolvers {
     @Query('getPosts')
     async getAllPosts() {
         let postsWithoutCommentsInfo = await this.postsService.findAll()
-        return await postsWithoutCommentsInfo.map((post) => {
-            post.numberOfComments = this.commentsService.getCommentsOfPost(post.id).length
+        return await postsWithoutCommentsInfo.map(async (post) => {
+            post.numberOfComments = (await this.commentsService.getCommentsOfPost(post.id)).length
             return post
         })
     }
