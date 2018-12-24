@@ -6,9 +6,10 @@ import { join } from 'path';
 import { PostsModule } from './posts/posts.module'
 import { CommentsModule } from './comments/comments.module'
 import { MongooseModule } from '@nestjs/mongoose'
+import { UploadingModule } from './uploading/uploading.module'
 
 @Module({
-  imports: [PostsModule, CommentsModule, MongooseModule.forRoot('mongodb://arash5:helloworld123@ds243344.mlab.com:43344/lernito-coding-challenge'),
+  imports: [UploadingModule, PostsModule, CommentsModule, MongooseModule.forRoot('mongodb://arash5:helloworld123@ds243344.mlab.com:43344/lernito-coding-challenge'),
     GraphQLModule.forRoot({
       typePaths: ['./**/*.graphql'],
       definitions: {
