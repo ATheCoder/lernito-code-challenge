@@ -2,6 +2,9 @@ type Query {
     getPosts: [Post]
 }
 
+type Mutation {
+    addPost(addPostInput: AddPostInput): Post
+}
 
 type Post{
     id: String
@@ -9,4 +12,10 @@ type Post{
     text: String
     pictureURL: String
     numberOfComments: Int
+}
+
+input AddPostInput{
+    senderName: String
+    text: String
+    pictureURL: String
 }

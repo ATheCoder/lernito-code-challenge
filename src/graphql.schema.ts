@@ -1,7 +1,17 @@
+export class AddPostInput {
+    senderName?: string;
+    text?: string;
+    pictureURL?: string;
+}
+
 export class Comment {
     id?: number;
     postId?: string;
     text?: string;
+}
+
+export abstract class IMutation {
+    abstract addPost(addPostInput?: AddPostInput): Post | Promise<Post>;
 }
 
 export class Post {
