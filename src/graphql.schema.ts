@@ -1,7 +1,7 @@
 export class AddPostInput {
-    senderName?: string;
-    text?: string;
-    pictureURL?: string;
+    senderName: string;
+    text: string;
+    pictureURL: string;
 }
 
 export class Comment {
@@ -11,15 +11,15 @@ export class Comment {
 }
 
 export abstract class IMutation {
-    abstract addPost(addPostInput?: AddPostInput): Post | Promise<Post>;
+    abstract addPost(addPostInput: AddPostInput): Post | Promise<Post>;
 }
 
 export class Post {
-    id?: string;
-    senderName?: string;
-    text?: string;
-    pictureURL?: string;
-    numberOfComments?: number;
+    id: string;
+    senderName: string;
+    text: string;
+    pictureURL: string;
+    numberOfComments: number;
 }
 
 export abstract class IQuery {

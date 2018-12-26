@@ -17,7 +17,7 @@ export class PostsResolvers {
     }
 
     @Mutation('addPost')
-    async addPost(@Args('addPostInput') newPost: AddPostInput) {
+    async addPost(@Args('addPostInput') newPost: Post) {
         let savedPost = await this.postsService.addPost(newPost)
         savedPost.numberOfComments = 0
         return savedPost

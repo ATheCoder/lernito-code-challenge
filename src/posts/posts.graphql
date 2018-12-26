@@ -3,19 +3,19 @@ type Query {
 }
 
 type Mutation {
-    addPost(addPostInput: AddPostInput): Post
+    addPost(addPostInput: AddPostInput!): Post!
 }
 
 type Post{
-    id: String
-    senderName: String
-    text: String
-    pictureURL: String
-    numberOfComments: Int
+    id: String!
+    senderName: String!
+    text: String!
+    pictureURL: String!
+    numberOfComments: Int!
 }
 
 input AddPostInput{
-    senderName: String
-    text: String
-    pictureURL: String
+    senderName: String!
+    text: String!
+    pictureURL: String!
 }
